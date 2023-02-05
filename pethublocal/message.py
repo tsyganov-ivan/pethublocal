@@ -431,7 +431,7 @@ def parse_frame(pethubrecord, time_zone, hub, value):
         update_state = True
 
     elif value[0] == 0x18:  # Status - Feeder Feeding
-        frame_response.Operation = 'Feed'
+        frame_response.Operation = 'Feeding'
         if FeederState.has_value(value[15]):
             frame_response.Action = FeederState(int(value[15])).name.title()  # Action
             pethubrecord['Lid_State'] = frame_response.Action

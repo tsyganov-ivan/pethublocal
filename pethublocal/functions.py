@@ -1015,7 +1015,7 @@ def parse_mqtt_message(pethubconfig, mqtt_topic, mqtt_message):
                                             "Where": mqttmessage.Direction,
                                             "Time": timestamp_now(),
                                             "Update_Mac": DeviceMac}
-                                    if 'Feed' in mqttmessage.Operation:
+                                    if 'Feeding' in mqttmessage.Operation:
                                         pets[tag]['Feeding'] = {
                                             "Change": mqttmessage.Delta,
                                             "Time": timestamp_now()}
